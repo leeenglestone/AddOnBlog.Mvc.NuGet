@@ -1,0 +1,5 @@
+C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.csprojResolveAssemblyReference.cache
+C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library.Interfaces\bin\Debug\AddOnBlog.Mvc.Interfaces.dll
+C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library.Interfaces\bin\Debug\AddOnBlog.Mvc.Interfaces.pdb
+C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.dll
+C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.pdb
