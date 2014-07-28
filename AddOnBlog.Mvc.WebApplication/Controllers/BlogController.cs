@@ -29,11 +29,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult Add()
-        {
-            return View();
-        }
+        
 
 
 

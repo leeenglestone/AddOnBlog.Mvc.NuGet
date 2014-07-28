@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AddOnBlog.Mvc.Interfaces\AddOnBlog.Mvc.Interfaces.csproj">
+      <Project>{092be90b-9bd3-4f78-bd9a-24f86a3110bc}</Project>
+      <Name>AddOnBlog.Mvc.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AddOnBlog.Mvc.Library\AddOnBlog.Mvc.Library.csproj">
+      <Project>{441a3224-9c00-404d-8714-d0ea55583016}</Project>
+      <Name>AddOnBlog.Mvc.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AddOnBlog.Mvc.Models\AddOnBlog.Mvc.Models.csproj">
+      <Project>{fa8ffa32-9b13-46c2-92b7-600f00d2fe16}</Project>
+      <Name>AddOnBlog.Mvc.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
