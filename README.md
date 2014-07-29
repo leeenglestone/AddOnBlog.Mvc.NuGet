@@ -12,3 +12,11 @@ Basic requirements
 - Must serialise/deserialise blog posts and use the file system for post storage
 - Must have friendly urls (post-title-in-this-format)
 - Must have its own Configuration section in web.config
+- Must allow post comments
+
+
+
+Nice to haves
+-------------
+- Rss Feed
+- Existing blog import?
