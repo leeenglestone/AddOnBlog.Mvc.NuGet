@@ -3,9 +3,6 @@ C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Librar
 C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.csprojResolveAssemblyReference.cache
 C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.dll
 C:\development\GeneralProjects\AddOnBlog.Mvc.NuGet.Solution\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.pdb
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.csprojResolveAssemblyReference.cache
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.dll
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Library.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Library.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Interfaces.dll
@@ -47,3 +44,6 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\System.Web.We
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Newtonsoft.Json.xml
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.csprojResolveAssemblyReference.cache
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.pdb

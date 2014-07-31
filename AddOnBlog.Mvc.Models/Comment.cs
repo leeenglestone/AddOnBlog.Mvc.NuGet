@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddOnBlog.Mvc.Library.Models
+namespace AddOnBlog.Mvc.Models
 {
     public class Comment
     {

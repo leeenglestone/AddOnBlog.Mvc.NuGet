@@ -8,5 +8,11 @@ namespace AddOnBlog.Mvc.Interfaces
 {
     public interface IComment
     {
+        string Content { get; set; }
+        DateTime PostDate { get; set; }
+        string UserName { get; set; }
+        string UserEmail { get; set; }
+        string UserWebsite { get; set; }
+        bool Approved { get; set; }
     }
 }

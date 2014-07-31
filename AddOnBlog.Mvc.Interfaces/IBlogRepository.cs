@@ -12,5 +12,6 @@ namespace AddOnBlog.Mvc.Interfaces
        IPost Add(IPost post);
        IPost Update(IPost post);
        bool Delete(string id);
+       List<IPost> GetAll();
     }
 }

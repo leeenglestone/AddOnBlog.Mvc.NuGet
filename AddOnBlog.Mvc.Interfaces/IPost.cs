@@ -10,7 +10,14 @@ namespace AddOnBlog.Mvc.Interfaces
     {
         string Id { get; set; }
         string Title { get; set; }
-        string Body { get; set; }
+        string FriendlyUrl { get; set; }
+        DateTime PostDate { get; set; }
+        string Content { get; set; }
+        string UserName { get; set; }
+        string UserEmail { get; set; }
+        string UserWebsite { get; set; }
+        bool Approved { get; set; }
+
         List<IComment> Comments { get; set; }
     }
 }

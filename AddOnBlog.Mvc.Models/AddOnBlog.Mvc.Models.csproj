@@ -43,6 +43,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comment.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AddOnBlog.Mvc.Interfaces\AddOnBlog.Mvc.Interfaces.csproj">
+      <Project>{092be90b-9bd3-4f78-bd9a-24f86a3110bc}</Project>
+      <Name>AddOnBlog.Mvc.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
