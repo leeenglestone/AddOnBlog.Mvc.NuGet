@@ -16,8 +16,9 @@ namespace AddOnBlog.Mvc.Interfaces
         string UserName { get; set; }
         string UserEmail { get; set; }
         string UserWebsite { get; set; }
+        string SavePath { get; set; }
         bool Approved { get; set; }
 
-        List<IComment> Comments { get; set; }
+        //IComments Comments { get; set; }
     }
 }

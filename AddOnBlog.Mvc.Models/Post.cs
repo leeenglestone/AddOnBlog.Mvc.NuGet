@@ -18,7 +18,8 @@ namespace AddOnBlog.Mvc.Models
         public string UserEmail { get; set; }
         public string UserWebsite { get; set; }
         public bool Approved { get; set; }
+        public string SavePath { get; set; }
 
-        public List<IComment> Comments { get; set; }
+        public virtual List<Comment> Comments { get; set; }
     }
 }

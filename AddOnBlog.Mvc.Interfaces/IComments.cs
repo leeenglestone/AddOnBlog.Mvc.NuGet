@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddOnBlog.Mvc.Library
+namespace AddOnBlog.Mvc.Interfaces
 {
-    public class Post
+    public interface IComments
     {
 
     }

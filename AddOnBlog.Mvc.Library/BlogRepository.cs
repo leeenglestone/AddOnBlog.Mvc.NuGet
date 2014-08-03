@@ -1,4 +1,5 @@
 ﻿using AddOnBlog.Mvc.Interfaces;
+using AddOnBlog.Mvc.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,24 +14,37 @@ namespace AddOnBlog.Mvc.Library
     {
         public IPost Get(string id)
         {
-            throw new NotImplementedException();
+            Post post;
+
+            var path = AddOnBlogSettings.Settings.PostSavePath + id + ".xml";
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Post));
+
+            using (TextReader ReadFileStream = new StreamReader(path))
+            {
+                post = (Post)serializer.Deserialize(ReadFileStream);
+            }
+
+            return post;
         }
 
         public IPost Add(IPost post)
         {
+            // Set id
+            // 
+            post.Id = post.Title.ToFriendlyUrl();
+
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
-            var path = "";
+            var path = AddOnBlogSettings.Settings.PostSavePath + post.Id + ".xml";
+            post.SavePath = path;
 
-            using(TextWriter WriteFileStream = new StreamWriter(path))
+            using (TextWriter WriteFileStream = new StreamWriter(path))
             {
                 serializer.Serialize(WriteFileStream, post);
-
             }
 
             return post;
-
-            throw new NotImplementedException();
         }
 
         public IPost Update(IPost post)
@@ -45,7 +59,27 @@ namespace AddOnBlog.Mvc.Library
 
         public List<IPost> GetAll()
         {
-            throw new NotImplementedException();
+            List<IPost> posts = new List<IPost>();
+
+            var path = AddOnBlogSettings.Settings.PostSavePath;
+
+            var postFiles = Directory.GetFiles(path);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Post));
+
+            foreach (var file in postFiles)
+            {
+                using (TextReader ReadFileStream = new StreamReader(file))
+                {
+                    Post post = (Post)serializer.Deserialize(ReadFileStream);
+
+                    posts.Add(post);
+                }
+            }
+
+            return posts;
+
+            //throw new NotImplementedException();
         }
     }
 }

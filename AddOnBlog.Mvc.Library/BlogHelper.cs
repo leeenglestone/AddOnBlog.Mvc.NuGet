@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AddOnBlog.Mvc.Library
 {
-    class BlogHelper
+    public class BlogHelper
     {
+        
+
     }
 }

@@ -42,9 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddOnBlogSettings.cs" />
+    <Compile Include="BlogExtensions.cs" />
     <Compile Include="BlogHelper.cs" />
     <Compile Include="BlogRepository.cs" />
-    <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
