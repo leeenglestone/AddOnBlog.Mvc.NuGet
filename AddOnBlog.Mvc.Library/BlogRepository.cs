@@ -39,6 +39,12 @@ namespace AddOnBlog.Mvc.Library
             var path = AddOnBlogSettings.Settings.PostSavePath + post.Id + ".xml";
             post.SavePath = path;
 
+            // Check whether the file already exists
+            if(File.Exists(path))
+            {
+                throw new Exception("Cannot create post, a post with that title already exists!");
+            }
+
             using (TextWriter WriteFileStream = new StreamWriter(path))
             {
                 serializer.Serialize(WriteFileStream, post);
@@ -49,12 +55,27 @@ namespace AddOnBlog.Mvc.Library
 
         public IPost Update(IPost post)
         {
-            throw new NotImplementedException();
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Post));
+
+            var path = AddOnBlogSettings.Settings.PostSavePath + post.Id + ".xml";
+            post.SavePath = path;
+
+            using (TextWriter WriteFileStream = new StreamWriter(path))
+            {
+                serializer.Serialize(WriteFileStream, post);
+            }
+
+            return post;
         }
 
         public bool Delete(string id)
         {
-            throw new NotImplementedException();
+            var path = AddOnBlogSettings.Settings.PostSavePath + id + ".xml";
+
+            File.Delete(path);
+
+            return true;
         }
 
         public List<IPost> GetAll()
@@ -78,8 +99,6 @@ namespace AddOnBlog.Mvc.Library
             }
 
             return posts;
-
-            //throw new NotImplementedException();
         }
     }
 }

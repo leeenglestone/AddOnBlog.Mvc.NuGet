@@ -58,7 +58,7 @@ namespace AddOnBlog.Mvc.Tests
         {
             IPost post = new Post
             {
-                Title = "Some title",
+                Title = "Some title " + DateTime.Now.ToString("yyyyMMddHHmmss"),
                 Content = "Some content"
             };
 
@@ -72,17 +72,52 @@ namespace AddOnBlog.Mvc.Tests
         [Test]
         public void Post_Update()
         {
-            string friendlyUrl = "";
+            string postId = _blogRepository.GetAll().FirstOrDefault().Id;
 
-            var post = _blogRepository.Get(friendlyUrl);
+            // Get post
+            var post = _blogRepository.Get(postId);
+            var originalContent = post.Content;
 
-            throw new NotImplementedException();
+            // Update post
+            var newContent = DateTime.Now.ToString("yyyy-MM-dd HHmmss");
+            post.Content = newContent;
+            _blogRepository.Update(post);
+
+            // Retrieve post
+            var retrievedContent = _blogRepository.Get(postId).Content;
+
+            Assert.AreEqual(newContent, retrievedContent);
+
+            Console.WriteLine("Post_Update() : Post updated");
         }
 
         [Test]
         public void Post_Delete()
         {
-            throw new NotImplementedException();
+            var originalCount = _blogRepository.GetAll().Count;
+
+            // Add post
+            IPost post = new Post
+            {
+                Title = "Some title " + DateTime.Now.ToString("yyyyMMddHHmmss"),
+                Content = "Some content"
+            };
+
+            var newPost = _blogRepository.Add(post);
+
+            var countAfterAdd = _blogRepository.GetAll().Count;
+
+            Assert.Greater(countAfterAdd, originalCount);
+
+            // Delete post
+            _blogRepository.Delete(newPost.Id);
+
+            // Check deletion
+            var countAfterDeletion = _blogRepository.GetAll().Count;
+
+            Assert.AreEqual(originalCount, countAfterDeletion);
+
+            Console.WriteLine("Post_Delete()");
         }
     }
 }
