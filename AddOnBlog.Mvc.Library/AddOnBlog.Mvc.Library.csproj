@@ -56,10 +56,9 @@
       <Project>{fa8ffa32-9b13-46c2-92b7-600f00d2fe16}</Project>
       <Name>AddOnBlog.Mvc.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AddOnBlog.Mvc.WebApplication\AddOnBlog.MvcApplication.csproj">
-      <Project>{dd9d83b8-a94f-4cf8-86b6-44ab74caa5af}</Project>
-      <Name>AddOnBlog.MvcApplication</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

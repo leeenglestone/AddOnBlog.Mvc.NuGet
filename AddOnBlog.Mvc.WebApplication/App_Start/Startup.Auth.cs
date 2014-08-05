@@ -9,7 +9,7 @@ using Owin;
 using System;
 using WebApplication1.Models;
 
-namespace WebApplication1
+namespace MvcApplication
 {
     public partial class Startup
     {

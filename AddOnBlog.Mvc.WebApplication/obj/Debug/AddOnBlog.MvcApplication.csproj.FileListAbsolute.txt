@@ -54,3 +54,11 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\Microsoft.Ow
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\obj\Debug\AddOnBlog.MvcApplication.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\obj\Debug\AddOnBlog.MvcApplication.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\obj\Debug\AddOnBlog.MvcApplication.csprojResolveAssemblyReference.cache
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Interfaces.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Library.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Models.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\Ninject.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Interfaces.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Library.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\AddOnBlog.Mvc.Models.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\bin\Ninject.xml

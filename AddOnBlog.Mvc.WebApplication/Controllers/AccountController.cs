@@ -12,7 +12,7 @@ using Microsoft.Owin.Security;
 using Owin;
 using WebApplication1.Models;
 
-namespace WebApplication1.Controllers
+namespace MvcApplication.Controllers
 {
     [Authorize]
     public class AccountController : Controller
