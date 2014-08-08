@@ -9,12 +9,12 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MvcApplication
+namespace AddOnBlog.MvcApplication
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcWebApplication : System.Web.HttpApplication
     {
-        IBlogRepository _blogRepository;
-        IKernel kernel;
+        //IBlogRepository _blogRepository;
+        //IKernel kernel;
 
 
         protected void Application_Start()
@@ -24,10 +24,10 @@ namespace MvcApplication
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            kernel = new StandardKernel();
-            kernel.Bind<IBlogRepository>().To<BlogRepository>();
+            //kernel = new StandardKernel();
+            //kernel.Bind<IBlogRepository>().To<BlogRepository>();
 
-            _blogRepository = kernel.Get<IBlogRepository>();
+            //_blogRepository = kernel.Get<IBlogRepository>();
 
         }
     }

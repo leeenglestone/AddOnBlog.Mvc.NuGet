@@ -9,7 +9,7 @@ using Owin;
 using System;
 using WebApplication1.Models;
 
-namespace MvcApplication
+namespace AddOnBlog.MvcApplication
 {
     public partial class Startup
     {

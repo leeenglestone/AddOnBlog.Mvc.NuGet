@@ -10,7 +10,7 @@
     <Node UniqueName="[0-1011]AddOnBlog.Mvc.Tests" Expanded="true" />
     <Node UniqueName="[0-1000]AddOnBlog.Mvc.Tests.ConfigurationTests" Expanded="true" />
     <Node UniqueName="[0-1001]AddOnBlog.Mvc.Tests.ConfigurationTests.Configuration_Post_Save_Path" Checked="true" />
-    <Node UniqueName="[0-1002]AddOnBlog.Mvc.Tests.PostTests" Expanded="true" />
+    <Node UniqueName="[0-1002]AddOnBlog.Mvc.Tests.PostTests" Expanded="true" Checked="true" />
     <Node UniqueName="[0-1007]AddOnBlog.Mvc.Tests.PostTests.Post_Delete" Checked="true" />
     <Node UniqueName="[0-1004]AddOnBlog.Mvc.Tests.PostTests.Posts_Get" Checked="true" />
     <Node UniqueName="[0-1003]AddOnBlog.Mvc.Tests.PostTests.Posts_Get_All" Checked="true" />

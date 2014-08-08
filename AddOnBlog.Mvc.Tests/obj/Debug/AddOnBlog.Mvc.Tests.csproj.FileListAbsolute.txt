@@ -1,4 +1,3 @@
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.csprojResolveAssemblyReference.cache
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\app.config
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll.config
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll
@@ -13,5 +12,6 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.L
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Models.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\Ninject.xml
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\nunit.framework.xml
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.csprojResolveAssemblyReference.cache
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.pdb

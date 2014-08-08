@@ -7,4 +7,3 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Interfaces\bin\Debug\AddOnBlog.
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Interfaces\bin\Debug\AddOnBlog.Mvc.Interfaces.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.pdb
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Interfaces\obj\Debug\AddOnBlog.Mvc.Interfaces.csprojResolveAssemblyReference.cache
