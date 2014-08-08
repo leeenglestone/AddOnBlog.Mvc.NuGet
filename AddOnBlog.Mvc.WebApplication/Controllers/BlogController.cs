@@ -1,4 +1,5 @@
 ﻿using AddOnBlog.Mvc.Interfaces;
+using AddOnBlog.Mvc.Library;
 using AddOnBlog.Mvc.Models;
 using AddOnBlog.MvcApplication.Models;
 using System;
@@ -11,7 +12,7 @@ namespace AddOnBlog.MvcApplication.Controllers
 {
     public class BlogController : Controller
     {
-        IBlogRepository _blogRepository;
+        IBlogRepository _blogRepository  = new BlogRepository();
 
         // GET: Blog
         public ActionResult Index()
@@ -23,6 +24,8 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             var posts = new PostsViewModel();
 
+            //_blogRepository = new BlogRepository();
+
             posts.Posts = _blogRepository.GetAll();
 
             return View(posts);
@@ -32,9 +35,9 @@ namespace AddOnBlog.MvcApplication.Controllers
         /// View a blog post
         /// </summary>
         /// <returns></returns>
-        public ActionResult View(string id)
+        public ActionResult Post(string id)
         {
-            var model = new BlogViewModel();
+            var model = new PostViewModel();
 
             model = Convert(_blogRepository.Get(id));
 
@@ -42,7 +45,7 @@ namespace AddOnBlog.MvcApplication.Controllers
         }
 
         [Authorize]
-        public ActionResult Add(BlogViewModel model)
+        public ActionResult Add(PostViewModel model)
         {
             if(ModelState.IsValid)
             {
@@ -53,7 +56,7 @@ namespace AddOnBlog.MvcApplication.Controllers
         }
 
         [Authorize]
-        public ActionResult Update(BlogViewModel model)
+        public ActionResult Update(PostViewModel model)
         {
             if(ModelState.IsValid)
             {
@@ -71,9 +74,9 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View();
         }
 
-        private BlogViewModel Convert(IPost post)
+        private PostViewModel Convert(IPost post)
         {
-            var model = new BlogViewModel();
+            var model = new PostViewModel();
             model.Post.Content = post.Content;
             model.Post.Title = post.Title;
             model.Post.Id = post.Id;

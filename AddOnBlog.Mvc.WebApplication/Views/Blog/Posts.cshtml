@@ -1,0 +1,17 @@
+﻿@using AddOnBlog.Mvc.Library;
+@model AddOnBlog.MvcApplication.Models.PostsViewModel
+@{
+    ViewBag.Title = "Posts";
+}
+
+<h2>Posts</h2>
+
+<div id="posts">
+    @foreach (var p in Model.Posts)
+    {
+        <div class="post">
+            <h3>@Html.ActionLink(p.Title, "Post", new { id=p.Title.ToFriendlyUrl() })</h3>
+            <div>@p.Content</div>
+        </div>
+    }
+</div>

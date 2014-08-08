@@ -4,11 +4,17 @@ using System.Linq;
 using System.Web;
 
 using AddOnBlog.Mvc.Interfaces;
+using AddOnBlog.Mvc.Models;
 
 namespace AddOnBlog.MvcApplication.Models
 {
     public class PostViewModel
     {
+        public PostViewModel()
+        {
+            Post = new Post();
+        }
+
         public IPost Post { get; set; }
     }
 }
