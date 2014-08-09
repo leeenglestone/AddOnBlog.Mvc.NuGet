@@ -56,17 +56,6 @@ namespace AddOnBlog.MvcApplication.Controllers
         }
 
         [Authorize]
-        public ActionResult Update(PostViewModel model)
-        {
-            if(ModelState.IsValid)
-            {
-
-            }
-
-            return View(model);
-        }
-
-        [Authorize]
         public ActionResult Delete(string id)
         {
             // Check blog post id belongs to current user
@@ -82,6 +71,20 @@ namespace AddOnBlog.MvcApplication.Controllers
             var model = new PostViewModel();
 
             model = Convert(_blogRepository.Get(id));
+
+            return View(model);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Edit(PostViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _blogRepository.Update(model.Post);
+
+                return RedirectToAction("Posts");
+            }
 
             return View(model);
         }
