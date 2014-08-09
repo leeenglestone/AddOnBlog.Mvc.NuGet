@@ -1,0 +1,23 @@
+﻿@model AddOnBlog.MvcApplication.Models.PostViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>@Model.Post.Title</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div id="post">
+        <div id="post-content">
+            @Html.TextAreaFor(x=>x.Post.Content)
+            @*@Model.Post.Content*@
+        </div>
+        <hr />
+        <div id="post-actions">
+            <p>@Html.ActionLink("Edit", "Edit", new { id = Model.Post.Id }, new { @class = "btn btn-warning" }) @Html.ActionLink("Delete", "Delete", new { id = Model.Post.Id }, new { @class = "btn btn-danger" })</p>
+        </div>
+    </div>
+
+}
+

@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
 using WebApplication1.Models;
+using System.Web.Security;
 
 namespace AddOnBlog.MvcApplication.Controllers
 {
@@ -57,6 +58,15 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             if (ModelState.IsValid)
             {
+                if(model.Email == "test@test.com" && model.Password == "test")
+                {
+                    FormsAuthentication.SetAuthCookie(model.Email, true);
+
+                    //await SignInAsync(user, model.RememberMe);
+                    return RedirectToLocal(returnUrl);
+                }
+
+                /*
                 var user = await UserManager.FindAsync(model.Email, model.Password);
                 if (user != null)
                 {
@@ -67,6 +77,7 @@ namespace AddOnBlog.MvcApplication.Controllers
                 {
                     ModelState.AddModelError("", "Invalid username or password.");
                 }
+                 */
             }
 
             // If we got this far, something failed, redisplay form
@@ -546,6 +557,11 @@ namespace AddOnBlog.MvcApplication.Controllers
 
             public override void ExecuteResult(ControllerContext context)
             {
+                // this line is to try to get FormsAuthentication working..
+                context.RequestContext.HttpContext.Response.SuppressFormsAuthenticationRedirect = true;
+
+
+
                 var properties = new AuthenticationProperties() { RedirectUri = RedirectUri };
                 if (UserId != null)
                 {

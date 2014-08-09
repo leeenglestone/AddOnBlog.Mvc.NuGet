@@ -71,7 +71,19 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             // Check blog post id belongs to current user
 
-            return View();
+            return View("Posts");
+        }
+
+        [Authorize]
+        public ActionResult Edit(string id)
+        {
+            // Check blog post id belongs to current user
+
+            var model = new PostViewModel();
+
+            model = Convert(_blogRepository.Get(id));
+
+            return View(model);
         }
 
         private PostViewModel Convert(IPost post)
