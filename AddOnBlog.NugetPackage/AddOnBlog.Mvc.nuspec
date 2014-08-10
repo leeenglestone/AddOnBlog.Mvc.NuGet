@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>AddOnBlog.Mvc</id>
+    <version>0.1</version>
+    <authors>Lee Englestone</authors>
+    <owners>Lee Englestone</owners>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description></description>
+    <tags>MVC MVC5 ASP.NET Blog</tags>
+  </metadata>
+</package>
+ 
