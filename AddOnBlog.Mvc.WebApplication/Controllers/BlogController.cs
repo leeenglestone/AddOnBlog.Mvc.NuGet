@@ -60,7 +60,12 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             // Check blog post id belongs to current user
 
-            return View("Posts");
+            _blogRepository.Delete(id);
+
+            var posts = new PostsViewModel();
+            posts.Posts = _blogRepository.GetAll();
+
+            return View("Posts", posts);
         }
 
         [Authorize]
