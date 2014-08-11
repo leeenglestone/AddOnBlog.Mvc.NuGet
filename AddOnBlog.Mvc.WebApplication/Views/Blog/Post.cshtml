@@ -8,10 +8,14 @@
     <div id="post-content">
         @Model.Post.Content
     </div>
+
+    @if(HttpContext.Current.User.Identity.IsAuthenticated) 
+    {
     <hr/>
     <div id="post-actions">
         <p>@Html.ActionLink("Edit", "Edit", new { id = Model.Post.Id }, new { @class="btn btn-warning" }) 
         @Html.ActionLink("Delete", "Delete", new { id = Model.Post.Id }, new { @class="btn btn-danger" })</p>
     </div>
+    }
 </div>
 

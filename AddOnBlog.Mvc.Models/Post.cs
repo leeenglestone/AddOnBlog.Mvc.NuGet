@@ -1,6 +1,7 @@
 ﻿using AddOnBlog.Mvc.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,10 @@ namespace AddOnBlog.Mvc.Models
     public class Post : IPost
     {
         public string Id { get; set; }
+
+        [Required]
         public string Title { get; set; }
+
         public string FriendlyUrl { get; set; }
         public DateTime PostDate { get; set; }
         public string Content { get; set; }

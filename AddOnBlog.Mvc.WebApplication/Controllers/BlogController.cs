@@ -24,17 +24,11 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             var posts = new PostsViewModel();
 
-            //_blogRepository = new BlogRepository();
-
             posts.Posts = _blogRepository.GetAll();
 
             return View(posts);
         }
 
-        /// <summary>
-        /// View a blog post
-        /// </summary>
-        /// <returns></returns>
         public ActionResult Post(string id)
         {
             var model = new PostViewModel();
@@ -45,21 +39,29 @@ namespace AddOnBlog.MvcApplication.Controllers
         }
 
         [Authorize]
-        public ActionResult Add(PostViewModel model)
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult Create(PostViewModel model)
         {
             if(ModelState.IsValid)
             {
-
+                _blogRepository.Add(model.Post);
             }
 
-            return View(model);
+            var posts = new PostsViewModel();
+            posts.Posts = _blogRepository.GetAll();
+
+            return View("Posts", posts);
         }
 
         [Authorize]
         public ActionResult Delete(string id)
         {
-            // Check blog post id belongs to current user
-
             _blogRepository.Delete(id);
 
             var posts = new PostsViewModel();
@@ -71,8 +73,6 @@ namespace AddOnBlog.MvcApplication.Controllers
         [Authorize]
         public ActionResult Edit(string id)
         {
-            // Check blog post id belongs to current user
-
             var model = new PostViewModel();
 
             model = Convert(_blogRepository.Get(id));

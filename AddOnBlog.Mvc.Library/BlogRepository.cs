@@ -6,17 +6,35 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Xml.Serialization;
 
 namespace AddOnBlog.Mvc.Library
 {
     public class BlogRepository : IBlogRepository
     {
+        public string PostSavePath()
+        {
+            if (HttpContext.Current == null)
+            {
+                return AddOnBlogSettings.Settings.PostSavePath;
+            }
+
+            var path = System.Web.HttpContext.Current.Server.MapPath(AddOnBlogSettings.Settings.PostSavePath);
+
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            return path;
+        }
+
         public IPost Get(string id)
         {
             Post post;
 
-            var path = AddOnBlogSettings.Settings.PostSavePath + id + ".xml";
+            var path = Path.Combine(PostSavePath(), id, ".xml");
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
@@ -30,13 +48,19 @@ namespace AddOnBlog.Mvc.Library
 
         public IPost Add(IPost post)
         {
+            if(String.IsNullOrEmpty(post.Title))
+            {
+                throw new ArgumentNullException("post.Title");
+            }
+
             // Set id
             // 
             post.Id = post.Title.ToFriendlyUrl();
+            post.FriendlyUrl = post.Title.ToFriendlyUrl();
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
-            var path = AddOnBlogSettings.Settings.PostSavePath + post.Id + ".xml";
+            var path = Path.Combine(PostSavePath(), post.Id + ".xml");
             post.SavePath = path;
 
             // Check whether the file already exists
@@ -58,7 +82,7 @@ namespace AddOnBlog.Mvc.Library
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
-            var path = AddOnBlogSettings.Settings.PostSavePath + post.Id + ".xml";
+            var path = Path.Combine(PostSavePath(), post.Id, ".xml");
             post.SavePath = path;
 
             using (TextWriter WriteFileStream = new StreamWriter(path))
@@ -71,7 +95,7 @@ namespace AddOnBlog.Mvc.Library
 
         public bool Delete(string id)
         {
-            var path = AddOnBlogSettings.Settings.PostSavePath + id + ".xml";
+            var path = Path.Combine(PostSavePath(), id, ".xml");
 
             File.Delete(path);
 
@@ -82,7 +106,7 @@ namespace AddOnBlog.Mvc.Library
         {
             List<IPost> posts = new List<IPost>();
 
-            var path = AddOnBlogSettings.Settings.PostSavePath;
+            var path = PostSavePath();
 
             var postFiles = Directory.GetFiles(path);
 

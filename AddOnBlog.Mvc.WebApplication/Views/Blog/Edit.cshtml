@@ -10,8 +10,10 @@
 
     <div id="post">
         <div id="post-content">
-            @Html.TextAreaFor(x=>x.Post.Content)
-            @*@Model.Post.Content*@
+            @Html.TextAreaFor(x => x.Post.Content, new { @class="form-control" })
+        </div>
+        <div>
+            <p>@Model.Post.FriendlyUrl</p>
         </div>
         <hr />
         <div id="post-actions">

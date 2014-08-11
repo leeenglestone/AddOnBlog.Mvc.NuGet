@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="true">
   <TopNode>[0-1008]C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll</TopNode>
-  <SelectedNode>[0-1004]AddOnBlog.Mvc.Tests.PostTests.Posts_Get</SelectedNode>
+  <SelectedNode>[0-1001]AddOnBlog.Mvc.Tests.ConfigurationTests.Configuration_Post_Save_Path</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1008]C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" Expanded="true" />

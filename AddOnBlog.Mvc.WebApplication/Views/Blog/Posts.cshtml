@@ -6,6 +6,12 @@
 
 <h2>Posts</h2>
 
+@if (!Model.Posts.Any())
+{
+    <p>There are currently no blog posts</p>
+    @Html.ActionLink("Create", "Create", "Blog", new { @class="btn btn-success" })
+}
+
 <div id="posts">
     @foreach (var p in Model.Posts)
     {
@@ -15,3 +21,4 @@
         </div>
     }
 </div>
+
