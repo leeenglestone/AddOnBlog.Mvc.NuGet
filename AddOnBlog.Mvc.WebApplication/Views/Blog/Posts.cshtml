@@ -6,6 +6,8 @@
 
 <h2>Posts</h2>
 
+<p>@Html.ActionLink("Create", "Create", "Blog")</p>
+
 @if (!Model.Posts.Any())
 {
     <p>There are currently no blog posts</p>
@@ -17,6 +19,7 @@
     {
         <div class="post">
             <h3>@Html.ActionLink(p.Title, "Post", new { id=p.Title.ToFriendlyUrl() })</h3>
+            <div>@p.PostDate.ToString("dd-MM-yyyy")</div>
             <div>@p.Content</div>
         </div>
     }

@@ -34,7 +34,7 @@ namespace AddOnBlog.Mvc.Library
         {
             Post post;
 
-            var path = Path.Combine(PostSavePath(), id, ".xml");
+            var path = Path.Combine(PostSavePath(), id + ".xml");
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
@@ -57,6 +57,7 @@ namespace AddOnBlog.Mvc.Library
             // 
             post.Id = post.Title.ToFriendlyUrl();
             post.FriendlyUrl = post.Title.ToFriendlyUrl();
+            post.PostDate = DateTime.Now;
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
@@ -79,10 +80,9 @@ namespace AddOnBlog.Mvc.Library
 
         public IPost Update(IPost post)
         {
-
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
-            var path = Path.Combine(PostSavePath(), post.Id, ".xml");
+            var path = Path.Combine(PostSavePath(), post.Id + ".xml");
             post.SavePath = path;
 
             using (TextWriter WriteFileStream = new StreamWriter(path))
@@ -95,7 +95,7 @@ namespace AddOnBlog.Mvc.Library
 
         public bool Delete(string id)
         {
-            var path = Path.Combine(PostSavePath(), id, ".xml");
+            var path = Path.Combine(PostSavePath(), id + ".xml");
 
             File.Delete(path);
 
