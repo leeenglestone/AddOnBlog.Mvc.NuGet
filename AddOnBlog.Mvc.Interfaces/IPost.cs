@@ -13,6 +13,7 @@ namespace AddOnBlog.Mvc.Interfaces
         string FriendlyUrl { get; set; }
         DateTime PostDate { get; set; }
         string Content { get; set; }
+        string Categories { get; set; }
         string UserName { get; set; }
         string UserEmail { get; set; }
         string UserWebsite { get; set; }
