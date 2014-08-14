@@ -10,11 +10,11 @@ namespace AddOnBlog.MvcApplication.Models
 {
     public class BlogViewModel
     {
-        public IPost Post { get; set; }
+        public List<IPost> Posts { get; set; }
 
         public BlogViewModel()
         {
-            Post = new Post();
+            Posts = new List<IPost>();
         }
 
     }

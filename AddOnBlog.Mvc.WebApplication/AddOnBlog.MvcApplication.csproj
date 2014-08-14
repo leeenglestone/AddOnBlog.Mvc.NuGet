@@ -168,6 +168,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BlogViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PostsViewModel.cs" />
     <Compile Include="Models\PostViewModel.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\blog.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -229,6 +231,8 @@
     <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Blog\Edit.cshtml" />
     <Content Include="Views\Blog\Create.cshtml" />
+    <Content Include="Views\Shared\_BlogPost.cshtml" />
+    <Content Include="Views\Shared\_BlogSidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

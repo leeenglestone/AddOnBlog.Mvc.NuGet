@@ -17,7 +17,10 @@ namespace AddOnBlog.MvcApplication.Controllers
         // GET: Blog
         public ActionResult Index()
         {
-            return View();
+            var model = new BlogViewModel();
+            model.Posts = _blogRepository.GetAll();
+
+            return View(model);
         }
 
         public ActionResult Posts()

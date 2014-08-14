@@ -10,6 +10,11 @@ namespace AddOnBlog.MvcApplication.Models
 {
     public class PostViewModel
     {
+        public PostViewModel(IPost post)
+        {
+            Post = post;
+        }
+
         public PostViewModel()
         {
             Post = new Post();
