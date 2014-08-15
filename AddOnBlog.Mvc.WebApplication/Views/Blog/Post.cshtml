@@ -3,8 +3,6 @@
     ViewBag.Title = "Post";
     Layout = null;
 }
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,28 +13,32 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
-    @Styles.Render("~/Content/css")
-
-
-    <!-- Custom styles for this template -->
     <link href="~/Content/blog.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
 </head>
 <body>
-    <div class="blog-masthead">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <nav class="blog-nav">
-                <a class="blog-nav-item active" href="/">Home</a>
-                <a class="blog-nav-item" href="#">New features</a>
-                <a class="blog-nav-item" href="#">Press</a>
-                <a class="blog-nav-item" href="#">New hires</a>
-                <a class="blog-nav-item" href="#">About</a>
-            </nav>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("AddOnBlog.MVC NuGet Package", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
         </div>
     </div>
 
-
-    <div class="container">
+    <div class="container body-content">
 
         <div class="blog-header">
             <h1 class="blog-title">@Model.Post.Title</h1>
@@ -44,10 +46,11 @@
         </div>
 
         <div class="row">
-            @Html.Partial("_BlogPost", new AddOnBlog.MvcApplication.Models.PostViewModel(Model.Post))
+            <div class="col-sm-12 blog-main">
+                @Html.Partial("_BlogPost", new AddOnBlog.MvcApplication.Models.PostViewModel(Model.Post))
+            </div>
         </div>
     </div>
 
 </body>
-
 </html>

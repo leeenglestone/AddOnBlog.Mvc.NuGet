@@ -12,13 +12,21 @@ namespace AddOnBlog.MvcApplication.Controllers
 {
     public class BlogController : Controller
     {
-        IBlogRepository _blogRepository  = new BlogRepository();
+        IBlogRepository _blogRepository = new BlogRepository();
 
         // GET: Blog
         public ActionResult Index()
         {
             var model = new BlogViewModel();
             model.Posts = _blogRepository.GetAll();
+
+            for (int x = 0; x < 12; x++)
+            {
+                var date =DateTime.Now.AddMonths(-x);
+
+                model.Archives.Add("/blog/archive/" + date.ToString("MM-yyyy"), date.ToString("MMM yyyy"));
+            }
+
 
             return View(model);
         }
@@ -41,6 +49,13 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View(model);
         }
 
+        public ActionResult Archive(string id)
+        {
+            var model = new BlogArchiveViewModel();
+            model.Posts = _blogRepository.GetArchive(id);
+            return View(model);
+        }
+
         [Authorize]
         public ActionResult Create()
         {
@@ -51,7 +66,7 @@ namespace AddOnBlog.MvcApplication.Controllers
         [Authorize]
         public ActionResult Create(PostViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _blogRepository.Add(model.Post);
             }
@@ -104,7 +119,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             model.Post.Title = post.Title;
             model.Post.Id = post.Id;
             model.Post.PostDate = post.PostDate;
-                
+
             return model;
         }
 

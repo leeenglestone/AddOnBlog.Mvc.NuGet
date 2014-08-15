@@ -11,11 +11,12 @@ namespace AddOnBlog.MvcApplication.Models
     public class BlogViewModel
     {
         public List<IPost> Posts { get; set; }
+        public Dictionary<string, string> Archives { get; set; }
 
         public BlogViewModel()
         {
             Posts = new List<IPost>();
+            Archives = new Dictionary<string, string>();
         }
-
     }
 }

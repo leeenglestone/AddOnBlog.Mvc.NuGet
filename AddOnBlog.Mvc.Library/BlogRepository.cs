@@ -124,5 +124,17 @@ namespace AddOnBlog.Mvc.Library
 
             return posts;
         }
+
+        public List<IPost> GetArchive(string period)
+        {
+            var parts = period.Split(new[] {"-"}, StringSplitOptions.RemoveEmptyEntries);
+
+            int year = int.Parse(parts[0]);
+            int month = int.Parse(parts[1]);
+
+            List<IPost> posts = GetAll().Where(x => x.PostDate.Month == month && x.PostDate.Year == year).ToList();
+
+            return posts;
+        }
     }
 }
