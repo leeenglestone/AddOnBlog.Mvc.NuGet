@@ -1,65 +1,29 @@
 ﻿@model AddOnBlog.MvcApplication.Models.BlogViewModel
 @{
     ViewBag.Title = "Index";
-    Layout = null;
+    Layout = "~/Views/Shared/_LayoutBlog.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>AddOnBlog MVC NuGet Package</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <link href="~/Content/blog.css" rel="stylesheet">
-    @Styles.Render("~/Content/css")
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("AddOnBlog.MVC NuGet Package", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
-                    @Html.Partial("_LoginPartial")
-                </div>
-            </div>
+
+<div class="container body-content">
+
+    <div class="blog-header">
+        <h1 class="blog-title">Blog Title Here</h1>
+        <p class="lead blog-description">Some sort of blog sub title here.</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-8 blog-main">
+            @foreach (var post in Model.Posts)
+            {
+                @Html.Partial("_BlogPost", new AddOnBlog.MvcApplication.Models.PostViewModel(post))
+            }
         </div>
 
-        <div class="container body-content">
-
-            <div class="blog-header">
-                <h1 class="blog-title">Blog Title Here</h1>
-                <p class="lead blog-description">Some sort of blog sub title here.</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-8 blog-main">
-                    @foreach (var post in Model.Posts)
-                    {
-                        @Html.Partial("_BlogPost", new AddOnBlog.MvcApplication.Models.PostViewModel(post))
-                    }
-                </div>
-
-                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                    @Html.Partial("_BlogSidebar", Model)
-                </div>
-
-            </div>
-
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+            @Html.Partial("_BlogSidebar", Model)
         </div>
-    </body>
-</html>
+
+    </div>
+
+</div>

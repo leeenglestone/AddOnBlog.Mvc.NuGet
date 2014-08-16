@@ -27,7 +27,6 @@ namespace AddOnBlog.MvcApplication.Controllers
                 model.Archives.Add("/blog/archive/" + date.ToString("MM-yyyy"), date.ToString("MMM yyyy"));
             }
 
-
             return View(model);
         }
 
@@ -51,8 +50,16 @@ namespace AddOnBlog.MvcApplication.Controllers
 
         public ActionResult Archive(string id)
         {
-            var model = new BlogArchiveViewModel();
+            var model = new BlogViewModel();
             model.Posts = _blogRepository.GetArchive(id);
+
+            for (int x = 0; x < 12; x++)
+            {
+                var date = DateTime.Now.AddMonths(-x);
+
+                model.Archives.Add("/blog/archive/" + date.ToString("MM-yyyy"), date.ToString("MMM yyyy"));
+            }
+
             return View(model);
         }
 

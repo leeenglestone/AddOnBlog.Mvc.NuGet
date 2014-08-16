@@ -168,7 +168,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BlogArchiveViewModel.cs" />
     <Compile Include="Models\BlogViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\PostsViewModel.cs" />
@@ -236,6 +235,7 @@
     <Content Include="Views\Shared\_BlogSidebar.cshtml" />
     <Content Include="Views\Shared\_BlogArchive.cshtml" />
     <Content Include="Views\Blog\Archive.cshtml" />
+    <Content Include="Views\Shared\_LayoutBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
