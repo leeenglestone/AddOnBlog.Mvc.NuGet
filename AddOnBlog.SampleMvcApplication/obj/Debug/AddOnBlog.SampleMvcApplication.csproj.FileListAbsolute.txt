@@ -52,3 +52,4 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.SampleMvcApplication\bin\Microsoft.
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.SampleMvcApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.SampleMvcApplication\obj\Debug\AddOnBlog.SampleMvcApplication.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.SampleMvcApplication\obj\Debug\AddOnBlog.SampleMvcApplication.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.SampleMvcApplication\obj\Debug\AddOnBlog.SampleMvcApplication.csprojResolveAssemblyReference.cache

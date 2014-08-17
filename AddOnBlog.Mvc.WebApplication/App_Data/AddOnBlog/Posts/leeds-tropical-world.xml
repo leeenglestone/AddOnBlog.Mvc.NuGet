@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Post xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>leeds-tropical-world</Id>
+  <Title>Leeds Tropical World</Title>
+  <FriendlyUrl>leeds-tropical-world</FriendlyUrl>
+  <PostDate>2014-08-17T19:30:15.1695424+01:00</PostDate>
+  <Content>We had a great time at Tropical World today despite grumpy employees in the cafe and being caught in several downpours when going for a walk afterwards. Though nothing an ice cream couldn't cure.</Content>
+  <Categories>Holly, Leeds</Categories>
+  <Approved>false</Approved>
+  <SavePath>C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.WebApplication\App_Data\AddOnBlog\Posts\leeds-tropical-world.xml</SavePath>
+</Post>

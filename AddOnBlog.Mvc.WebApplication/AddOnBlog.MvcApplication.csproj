@@ -231,11 +231,12 @@
     <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Blog\Edit.cshtml" />
     <Content Include="Views\Blog\Create.cshtml" />
-    <Content Include="Views\Shared\_BlogPost.cshtml" />
+    <Content Include="Views\Shared\_BlogPostRepeated.cshtml" />
     <Content Include="Views\Shared\_BlogSidebar.cshtml" />
     <Content Include="Views\Shared\_BlogArchive.cshtml" />
     <Content Include="Views\Blog\Archive.cshtml" />
     <Content Include="Views\Shared\_LayoutBlog.cshtml" />
+    <Content Include="Views\Shared\_BlogPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -129,8 +129,8 @@ namespace AddOnBlog.Mvc.Library
         {
             var parts = period.Split(new[] {"-"}, StringSplitOptions.RemoveEmptyEntries);
 
-            int year = int.Parse(parts[0]);
-            int month = int.Parse(parts[1]);
+            int month = int.Parse(parts[0]);
+            int year = int.Parse(parts[1]);
 
             List<IPost> posts = GetAll().Where(x => x.PostDate.Month == month && x.PostDate.Year == year).ToList();
 
