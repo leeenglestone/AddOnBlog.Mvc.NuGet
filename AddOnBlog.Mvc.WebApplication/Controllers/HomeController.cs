@@ -15,7 +15,11 @@ namespace WebApplication1.Controllers
 
         public ActionResult About()
         {
+            return View();
+        }
 
+        public ActionResult RoadMap()
+        {
             return View();
         }
 

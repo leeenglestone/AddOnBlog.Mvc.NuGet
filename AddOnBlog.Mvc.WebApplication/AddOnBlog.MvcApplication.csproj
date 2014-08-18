@@ -237,6 +237,7 @@
     <Content Include="Views\Blog\Archive.cshtml" />
     <Content Include="Views\Shared\_LayoutBlog.cshtml" />
     <Content Include="Views\Shared\_BlogPost.cshtml" />
+    <Content Include="Views\Home\RoadMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
