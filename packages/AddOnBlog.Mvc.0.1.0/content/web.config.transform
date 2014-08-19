@@ -1,0 +1,18 @@
+﻿<configuration>
+    <configSections>
+    <section name="addOnBlogSettings" type="AddOnBlog.Mvc.Library.AddOnBlogSettings,AddOnBlog.Mvc.Library" />
+  </configSections>
+  
+  <addOnBlogSettings postSavePath="~/App_Data/AddOnBlog/Posts" />
+  
+  <system.web>
+    <authentication mode="Forms">
+     <forms loginUrl="~/account/login">
+       <credentials passwordFormat="Clear">
+         <user name="addonblog@test.com" password="addonblog"/>
+       </credentials>
+     </forms>
+   </authentication>
+  </system.web>
+  
+</configuration>

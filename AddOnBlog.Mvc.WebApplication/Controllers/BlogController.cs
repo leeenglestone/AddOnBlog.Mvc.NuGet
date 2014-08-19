@@ -63,14 +63,14 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View(model);
         }
 
-        [Authorize]
+        [Authorize(Users="addonblog")]
         public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Users = "addonblog")]
         public ActionResult Create(PostViewModel model)
         {
             if (ModelState.IsValid)
@@ -84,7 +84,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View("Posts", posts);
         }
 
-        [Authorize]
+        [Authorize(Users = "addonblog")]
         public ActionResult Delete(string id)
         {
             _blogRepository.Delete(id);
@@ -95,7 +95,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View("Posts", posts);
         }
 
-        [Authorize]
+        [Authorize(Users = "addonblog")]
         public ActionResult Edit(string id)
         {
             var model = new PostViewModel();
@@ -105,7 +105,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View(model);
         }
 
-        [Authorize]
+        [Authorize(Users = "addonblog")]
         [HttpPost]
         public ActionResult Edit(PostViewModel model)
         {
@@ -129,6 +129,5 @@ namespace AddOnBlog.MvcApplication.Controllers
 
             return model;
         }
-
     }
 }

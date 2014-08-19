@@ -40,13 +40,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AddOnBlog.Mvc.Interfaces">
+    <Reference Include="AddOnBlog.Mvc.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="AddOnBlog.Mvc.Library">
+    <Reference Include="AddOnBlog.Mvc.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Library.dll</HintPath>
     </Reference>
-    <Reference Include="AddOnBlog.Mvc.Models">
+    <Reference Include="AddOnBlog.Mvc.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Models.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />

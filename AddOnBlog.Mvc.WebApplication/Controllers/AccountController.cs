@@ -58,7 +58,8 @@ namespace AddOnBlog.MvcApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(model.Email == "test@test.com" && model.Password == "test")
+                
+                if(FormsAuthentication.Authenticate(model.Email, model.Password))
                 {
                     FormsAuthentication.SetAuthCookie(model.Email, true);
 
