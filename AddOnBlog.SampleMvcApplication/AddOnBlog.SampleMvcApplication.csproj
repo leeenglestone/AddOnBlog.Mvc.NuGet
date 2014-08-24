@@ -40,18 +40,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AddOnBlog.Mvc.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="AddOnBlog.Mvc.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Library.dll</HintPath>
-    </Reference>
-    <Reference Include="AddOnBlog.Mvc.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AddOnBlog.Mvc.0.1.0\lib\AddOnBlog.Mvc.Models.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -172,22 +160,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BlogArchiveViewModel.cs" />
-    <Compile Include="Models\BlogViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\PostsViewModel.cs" />
-    <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AddOnBlog.Mvc.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -240,17 +222,6 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_LayoutBlog.cshtml" />
-    <Content Include="Views\Shared\_BlogSidebar.cshtml" />
-    <Content Include="Views\Shared\_BlogPostRepeated.cshtml" />
-    <Content Include="Views\Shared\_BlogPost.cshtml" />
-    <Content Include="Views\Shared\_BlogArchive.cshtml" />
-    <Content Include="Views\Blog\Posts.cshtml" />
-    <Content Include="Views\Blog\Post.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
-    <Content Include="Views\Blog\Edit.cshtml" />
-    <Content Include="Views\Blog\Create.cshtml" />
-    <Content Include="Views\Blog\Archive.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

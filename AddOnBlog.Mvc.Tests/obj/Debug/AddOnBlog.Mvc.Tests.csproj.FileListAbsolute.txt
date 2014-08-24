@@ -15,3 +15,5 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\nunit.framework
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.csprojResolveAssemblyReference.cache
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\obj\Debug\AddOnBlog.Mvc.Tests.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
