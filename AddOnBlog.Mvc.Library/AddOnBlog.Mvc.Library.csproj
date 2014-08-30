@@ -46,13 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddOnBlogSettings.cs" />
+    <Compile Include="AddOnBlogUser.cs" />
     <Compile Include="AddOnBlogUserManager.cs" />
-    <Compile Include="ApplicationUser.cs" />
+    <Compile Include="AddOnBlogUserStore.cs" />
     <Compile Include="BlogExtensions.cs" />
     <Compile Include="BlogHelper.cs" />
     <Compile Include="BlogRepository.cs" />
-    <Compile Include="CustomUserStore.cs" />
-    <Compile Include="OldSystemPasswordHasher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
