@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace AddOnBlog.Mvc.Interfaces
 {
@@ -19,6 +20,9 @@ namespace AddOnBlog.Mvc.Interfaces
         string UserWebsite { get; set; }
         string SavePath { get; set; }
         bool Approved { get; set; }
+        string Author { get; set; }
+        string AuthorLink { get; set; }
+
 
         //IComments Comments { get; set; }
     }

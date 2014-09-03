@@ -20,7 +20,7 @@
         <div class="post">
             <h3>@Html.ActionLink(p.Title, "Post", new { id = p.Title.ToFriendlyUrl() })</h3>
             <div>@p.PostDate.ToString("dd-MM-yyyy")</div>
-            <div>@p.Content</div>
+            <div>@Html.Raw(p.Content)</div>
         </div>
     }
 </div>

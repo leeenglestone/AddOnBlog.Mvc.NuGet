@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace AddOnBlog.Mvc.Library
@@ -53,13 +53,17 @@ namespace AddOnBlog.Mvc.Library
                 throw new ArgumentNullException("post.Title");
             }
 
-            // Set id
-            // 
             post.Id = post.Title.ToFriendlyUrl();
             post.FriendlyUrl = post.Title.ToFriendlyUrl();
             post.PostDate = DateTime.Now;
+            
+            if(String.IsNullOrEmpty(post.Id))
+            {
+                throw new ArgumentNullException("post.Id");
+            }
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
+
 
             var path = Path.Combine(PostSavePath(), post.Id + ".xml");
             post.SavePath = path;
@@ -70,9 +74,11 @@ namespace AddOnBlog.Mvc.Library
                 throw new Exception("Cannot create post, a post with that title already exists!");
             }
 
-            using (TextWriter WriteFileStream = new StreamWriter(path))
+            //using (TextWriter WriteFileStream = new StreamWriter(path))
+            using (XmlTextWriter WriteFileStream = new XmlTextWriter(path, Encoding.UTF8))
+            //using (StringWriter WriteFileStream = new StringWriter())
             {
-                serializer.Serialize(WriteFileStream, post);
+                serializer.Serialize(WriteFileStream, (Post)post);
             }
 
             return post;
@@ -85,7 +91,12 @@ namespace AddOnBlog.Mvc.Library
             var path = Path.Combine(PostSavePath(), post.Id + ".xml");
             post.SavePath = path;
 
-            using (TextWriter WriteFileStream = new StreamWriter(path))
+            if (String.IsNullOrEmpty(post.Id))
+            {
+                throw new ArgumentNullException("post.Id");
+            }
+
+            using (XmlTextWriter WriteFileStream = new XmlTextWriter(path, Encoding.UTF8))
             {
                 serializer.Serialize(WriteFileStream, post);
             }

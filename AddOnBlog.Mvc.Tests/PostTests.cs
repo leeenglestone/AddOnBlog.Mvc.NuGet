@@ -65,8 +65,9 @@ namespace AddOnBlog.Mvc.Tests
             var newPost = _blogRepository.Add(post);
 
             Assert.IsNotEmpty(newPost.Title);
+            Assert.IsNotEmpty(newPost.Content);
 
-            Console.WriteLine("Post_Add() : Path={0}", newPost.SavePath);
+            Console.WriteLine("Post_Add() : Path={0}, Content={1}", newPost.SavePath, newPost.Content);
         }
 
         [Test]

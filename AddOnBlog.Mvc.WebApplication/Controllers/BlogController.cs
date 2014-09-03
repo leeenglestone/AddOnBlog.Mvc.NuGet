@@ -69,6 +69,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View();
         }
 
+        [ValidateInput(false)] 
         [HttpPost]
         [Authorize(Users = "addonblog")]
         public ActionResult Create(PostViewModel model)
@@ -105,6 +106,7 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View(model);
         }
 
+        [ValidateInput(false)]     
         [Authorize(Users = "addonblog")]
         [HttpPost]
         public ActionResult Edit(PostViewModel model)
@@ -126,6 +128,9 @@ namespace AddOnBlog.MvcApplication.Controllers
             model.Post.Title = post.Title;
             model.Post.Id = post.Id;
             model.Post.PostDate = post.PostDate;
+            model.Post.Categories = post.Categories;
+            model.Post.Author = post.Author;
+            model.Post.AuthorLink = post.AuthorLink;
 
             return model;
         }

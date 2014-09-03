@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="true">
   <TopNode>[0-1008]C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll</TopNode>
-  <SelectedNode>[0-1007]AddOnBlog.Mvc.Tests.PostTests.Post_Delete</SelectedNode>
+  <SelectedNode>[0-1006]AddOnBlog.Mvc.Tests.PostTests.Post_Update</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1008]C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" Expanded="true" />
@@ -9,11 +9,8 @@
     <Node UniqueName="[0-1010]AddOnBlog.Mvc" Expanded="true" />
     <Node UniqueName="[0-1011]AddOnBlog.Mvc.Tests" Expanded="true" />
     <Node UniqueName="[0-1000]AddOnBlog.Mvc.Tests.ConfigurationTests" Expanded="true" />
-    <Node UniqueName="[0-1001]AddOnBlog.Mvc.Tests.ConfigurationTests.Configuration_Post_Save_Path" Checked="true" />
     <Node UniqueName="[0-1002]AddOnBlog.Mvc.Tests.PostTests" Expanded="true" />
-    <Node UniqueName="[0-1007]AddOnBlog.Mvc.Tests.PostTests.Post_Delete" Checked="true" />
+    <Node UniqueName="[0-1005]AddOnBlog.Mvc.Tests.PostTests.Post_Add" Checked="true" />
     <Node UniqueName="[0-1006]AddOnBlog.Mvc.Tests.PostTests.Post_Update" Checked="true" />
-    <Node UniqueName="[0-1004]AddOnBlog.Mvc.Tests.PostTests.Posts_Get" Checked="true" />
-    <Node UniqueName="[0-1003]AddOnBlog.Mvc.Tests.PostTests.Posts_Get_All" Checked="true" />
   </Nodes>
 </VisualState>

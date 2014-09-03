@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" total="5" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-08-12" time="20:53:55">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="ENGLESTONE-MBP" user="Englestone" user-domain="ENGLESTONE-MBP" />
+<test-results name="C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" total="2" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-09-01" time="22:43:25">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="ENGLESTONE-MBP" user="Englestone" user-domain="ENGLESTONE-MBP" />
   <culture-info current-culture="en-GB" current-uiculture="en-GB" />
-  <test-suite type="Assembly" name="C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" executed="True" result="Success" success="True" time="3.156" asserts="0">
+  <test-suite type="Assembly" name="C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\bin\Debug\AddOnBlog.Mvc.Tests.dll" executed="True" result="Failure" success="False" time="0.217" asserts="0">
     <results>
-      <test-suite type="Namespace" name="AddOnBlog" executed="True" result="Success" success="True" time="3.112" asserts="0">
+      <test-suite type="Namespace" name="AddOnBlog" executed="True" result="Failure" success="False" time="0.215" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Mvc" executed="True" result="Success" success="True" time="3.111" asserts="0">
+          <test-suite type="Namespace" name="Mvc" executed="True" result="Failure" success="False" time="0.214" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="3.110" asserts="0">
+              <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="0.213" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="ConfigurationTests" executed="True" result="Success" success="True" time="0.360" asserts="0">
+                  <test-suite type="TestFixture" name="PostTests" executed="True" result="Failure" success="False" time="0.212" asserts="0">
                     <results>
-                      <test-case name="AddOnBlog.Mvc.Tests.ConfigurationTests.Configuration_Post_Save_Path" executed="True" result="Success" success="True" time="0.330" asserts="1" />
-                    </results>
-                  </test-suite>
-                  <test-suite type="TestFixture" name="PostTests" executed="True" result="Success" success="True" time="2.738" asserts="0">
-                    <results>
-                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Post_Delete" executed="True" result="Success" success="True" time="2.119" asserts="2" />
-                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Post_Update" executed="True" result="Success" success="True" time="0.013" asserts="1" />
-                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Posts_Get" executed="True" result="Success" success="True" time="0.003" asserts="1" />
-                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Posts_Get_All" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Post_Add" executed="True" result="Success" success="True" time="0.006" asserts="2" />
+                      <test-case name="AddOnBlog.Mvc.Tests.PostTests.Post_Update" executed="True" result="Failure" success="False" time="0.192" asserts="1">
+                        <failure>
+                          <message><![CDATA[  Expected: "2014-09-01 224324"
+  But was:  null
+]]></message>
+                          <stack-trace><![CDATA[at AddOnBlog.Mvc.Tests.PostTests.Post_Update() in c:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Tests\PostTests.cs:line 90
+]]></stack-trace>
+                        </failure>
+                      </test-case>
                     </results>
                   </test-suite>
                 </results>
