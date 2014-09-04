@@ -14,5 +14,6 @@ namespace AddOnBlog.Mvc.Interfaces
        bool Delete(string id);
        List<IPost> GetAll();
        List<IPost> GetArchive(string period);
+       List<IPost> GetCategory(string id);
     }
 }

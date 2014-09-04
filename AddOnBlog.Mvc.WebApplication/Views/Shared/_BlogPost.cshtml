@@ -11,4 +11,11 @@
 
     @Html.Raw(@Model.Post.Content)
 
+    <p>Posted under : 
+    @foreach (var c in Model.Post.Categories.Split(new[] {","}, StringSplitOptions.RemoveEmptyEntries))
+    {
+        @Html.ActionLink(c, "Category", new { id=c }, null)
+    }
+    </p>
+
 </div>

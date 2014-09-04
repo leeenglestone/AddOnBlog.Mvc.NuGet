@@ -63,6 +63,14 @@ namespace AddOnBlog.MvcApplication.Controllers
             return View(model);
         }
 
+        public ActionResult Category(string id)
+        {
+            var model = new BlogViewModel();
+            model.Posts = _blogRepository.GetCategory(id);
+           
+            return View(model);
+        }
+
         [Authorize(Users="addonblog")]
         public ActionResult Create()
         {

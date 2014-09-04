@@ -64,7 +64,6 @@ namespace AddOnBlog.Mvc.Library
 
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
-
             var path = Path.Combine(PostSavePath(), post.Id + ".xml");
             post.SavePath = path;
 
@@ -74,9 +73,7 @@ namespace AddOnBlog.Mvc.Library
                 throw new Exception("Cannot create post, a post with that title already exists!");
             }
 
-            //using (TextWriter WriteFileStream = new StreamWriter(path))
             using (XmlTextWriter WriteFileStream = new XmlTextWriter(path, Encoding.UTF8))
-            //using (StringWriter WriteFileStream = new StringWriter())
             {
                 serializer.Serialize(WriteFileStream, (Post)post);
             }
@@ -144,6 +141,13 @@ namespace AddOnBlog.Mvc.Library
             int year = int.Parse(parts[1]);
 
             List<IPost> posts = GetAll().Where(x => x.PostDate.Month == month && x.PostDate.Year == year).ToList();
+
+            return posts;
+        }
+
+        public List<IPost> GetCategory(string category)
+        {
+            List<IPost> posts = GetAll().Where(x => x.Categories.Split(new[]{","}, StringSplitOptions.RemoveEmptyEntries).Contains(category)).ToList();
 
             return posts;
         }
