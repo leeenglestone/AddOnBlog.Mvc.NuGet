@@ -1,0 +1,26 @@
+﻿@using AddOnBlog.Mvc.Library;
+@model AddOnBlog.MvcApplication.Models.PostsViewModel
+@{
+    ViewBag.Title = "Posts";
+}
+
+<h2>Posts</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@Html.ActionLink("Create", "Create", "Blog", new { @class = "btn btn-success" })</p>
+}
+@if (!Model.Posts.Any())
+{
+    <p>There are currently no blog posts</p>
+}
+<div id="posts">
+    @foreach (var p in Model.Posts)
+    {
+        <div class="post">
+            <h3>@Html.ActionLink(p.Title, "Post", new { id = p.Title.ToFriendlyUrl() })</h3>
+            <div>@p.PostDate.ToString("dd-MM-yyyy")</div>
+            <div>@Html.Raw(p.Content)</div>
+        </div>
+    }
+</div>

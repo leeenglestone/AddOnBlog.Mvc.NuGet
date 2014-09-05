@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
-namespace AddOnBlog.SampleMvcApplication.Models
+namespace AddOnBlog.SampleMvcApplication.WebApplication1.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
@@ -38,7 +38,7 @@ namespace AddOnBlog.SampleMvcApplication.Models
     public class LoginViewModel
     {
         [Required]
-        [EmailAddress]
+        //[EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

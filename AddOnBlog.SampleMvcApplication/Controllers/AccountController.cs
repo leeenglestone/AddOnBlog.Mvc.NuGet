@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
 using AddOnBlog.SampleMvcApplication.Models;
+using AddOnBlog.SampleMvcApplication.WebApplication1.Models;
 
 namespace AddOnBlog.SampleMvcApplication.Controllers
 {

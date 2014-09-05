@@ -8,7 +8,7 @@ using System.Web.Routing;
 
 namespace AddOnBlog.SampleMvcApplication
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcWebApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {

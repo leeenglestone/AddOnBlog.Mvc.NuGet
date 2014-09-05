@@ -8,10 +8,10 @@ C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Library.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Interfaces.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Models.dll
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Interfaces.pdb
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\AddOnBlog.Mvc.Models.pdb
+C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.csprojResolveAssemblyReference.cache
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.dll
 C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\obj\Debug\AddOnBlog.Mvc.Library.pdb
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\development\AddOnBlog.Mvc.NuGet\AddOnBlog.Mvc.Library\bin\Debug\Microsoft.AspNet.Identity.Core.xml

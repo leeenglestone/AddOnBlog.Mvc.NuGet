@@ -1,0 +1,57 @@
+﻿@model AddOnBlog.MvcApplication.Models.PostViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+@section Scripts {
+
+    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+    <script src="~/Scripts/tag-it.js"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: "textarea",
+            plugins: [
+                "code"
+            ]
+        });
+
+        $(function () {
+            $('#Post_Categories').tagit();
+        });
+    </script>
+}
+<h2>@Model.Post.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <div id="post">
+        <div class="form-group">
+            @Html.TextBoxFor(x => x.Post.PostDate)
+        </div>
+        <div class="form-group" id="post-content">
+            @Html.TextAreaFor(x => x.Post.Content, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Post.Categories, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(x => x.Post.Categories, new { @class = "form-control" })
+        </div>
+        <div>
+            <p>@Model.Post.FriendlyUrl</p>
+        </div>
+        <hr />
+        <div id="post-actions">
+            <p>
+                <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Post.Id }, new { @class = "btn btn-danger" })
+
+            </p>
+        </div>
+    </div>
+
+    @Html.HiddenFor(x => x.Post.Title)
+    @Html.HiddenFor(x => x.Post.Id)
+
+}
+
