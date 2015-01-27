@@ -40,14 +40,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AddOnBlog.Mvc.Interfaces">
-      <HintPath>..\packages\AddOnBlog.Mvc.0.3.0\lib\AddOnBlog.Mvc.Interfaces.dll</HintPath>
+    <Reference Include="AddOnBlog.Mvc.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AddOnBlog.Mvc.0.4.0\lib\AddOnBlog.Mvc.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="AddOnBlog.Mvc.Library">
-      <HintPath>..\packages\AddOnBlog.Mvc.0.3.0\lib\AddOnBlog.Mvc.Library.dll</HintPath>
+    <Reference Include="AddOnBlog.Mvc.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AddOnBlog.Mvc.0.4.0\lib\AddOnBlog.Mvc.Library.dll</HintPath>
     </Reference>
-    <Reference Include="AddOnBlog.Mvc.Models">
-      <HintPath>..\packages\AddOnBlog.Mvc.0.3.0\lib\AddOnBlog.Mvc.Models.dll</HintPath>
+    <Reference Include="AddOnBlog.Mvc.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AddOnBlog.Mvc.0.4.0\lib\AddOnBlog.Mvc.Models.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -174,11 +177,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\BlogViewModel.cs" />
+    <Compile Include="Models\AddOnBlog\BlogItemViewModel.cs" />
+    <Compile Include="Models\AddOnBlog\BlogViewModel.cs" />
+    <Compile Include="Models\AddOnBlog\PostsViewModel.cs" />
+    <Compile Include="Models\AddOnBlog\PostViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\PostsViewModel.cs" />
-    <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

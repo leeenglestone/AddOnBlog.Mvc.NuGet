@@ -17,10 +17,13 @@ namespace AddOnBlog.Mvc.Models
 
         public string Id { get; set; }
 
+        public bool IsHidden { get; set; }
+
         [Required]
         public string Title { get; set; }
 
         public string FriendlyUrl { get; set; }
+        
         public DateTime PostDate { get; set; }
         
         private string _content;

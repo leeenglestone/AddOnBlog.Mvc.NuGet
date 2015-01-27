@@ -1,0 +1,21 @@
+﻿@model AddOnBlog.MvcApplication.Models.PostViewModel
+
+<div class="blog-header">
+    <h1 class="blog-title">@Model.Post.Title</h1>
+    @*<p class="lead blog-description">Some sort of blog sub title here.</p>*@
+</div>
+
+<div class="blog-post">
+    @*<h2 class="blog-post-title">@Html.ActionLink(Model.Post.Title, "Post", new { id=Model.Post.FriendlyUrl}, null)</h2>*@
+    <p class="blog-post-meta">@Model.Post.PostDate.ToString("MMM d, yyyy") by <a href="@Model.Post.AuthorLink">@Model.Post.Author</a></p>
+
+    @Html.Raw(@Model.Post.Content)
+
+    <p>Posted under : 
+    @foreach (var c in Model.Post.Categories.Split(new[] {","}, StringSplitOptions.RemoveEmptyEntries))
+    {
+        @Html.ActionLink(c, "Category", new { id=c }, null)
+    }
+    </p>
+
+</div>

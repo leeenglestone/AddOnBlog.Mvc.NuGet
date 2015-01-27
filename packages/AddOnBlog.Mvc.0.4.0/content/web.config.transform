@@ -1,0 +1,7 @@
+﻿<configuration>
+    <configSections>
+        <section name="addOnBlogSettings" type="AddOnBlog.Mvc.Library.AddOnBlogSettings,AddOnBlog.Mvc.Library" />
+    </configSections>
+  
+    <addOnBlogSettings postSavePath="~/App_Data/AddOnBlog/Posts" userName="addonblog" password="addonblog" />
+</configuration>

@@ -36,6 +36,11 @@ namespace AddOnBlog.Mvc.Library
 
             var path = Path.Combine(PostSavePath(), id + ".xml");
 
+            if(!File.Exists(path))
+            {
+                return new Post();
+            }
+
             XmlSerializer serializer = new XmlSerializer(typeof(Post));
 
             using (TextReader ReadFileStream = new StreamReader(path))
@@ -55,7 +60,6 @@ namespace AddOnBlog.Mvc.Library
 
             post.Id = post.Title.ToFriendlyUrl();
             post.FriendlyUrl = post.Title.ToFriendlyUrl();
-            post.PostDate = DateTime.Now;
             
             if(String.IsNullOrEmpty(post.Id))
             {
@@ -147,9 +151,13 @@ namespace AddOnBlog.Mvc.Library
 
         public List<IPost> GetCategory(string category)
         {
-            List<IPost> posts = GetAll().Where(x => x.Categories.Split(new[]{","}, StringSplitOptions.RemoveEmptyEntries).Contains(category)).ToList();
+            var posts = GetAll().Where(x => !String.IsNullOrEmpty(x.Categories));
 
-            return posts;
+            posts = posts.Where(x => x.Categories.ToLower().Split(new[]{","}, StringSplitOptions.RemoveEmptyEntries).Contains(category));
+
+            //List<IPost> posts = GetAll().Where(x => x.Categories.Split(new[]{","}, StringSplitOptions.RemoveEmptyEntries).Contains(category)).ToList();
+
+            return posts.ToList();
         }
     }
 }
